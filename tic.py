@@ -43,15 +43,25 @@ while a==1:
 			else:
 				print("Pick another number")
 
-		while True:
-			player2_choice = int(input("Player 2, choose from 1-9 "))
-
-			if rows[player2_choice-1] == "_":
-				drawTablep2(player2_choice)
-				break
-			else:
-				print("Pick another number")
 
 	except Exception:
-		print("Pick a number")
+		print("Pick a number - ex1")
+		continue
+	try:
 
+		while True:
+			try:
+				player2_choice = int(input("Player 2, choose from 1-9 "))
+
+				if rows[player2_choice-1] == "_":
+					drawTablep2(player2_choice)
+					break
+				else:
+					print("Pick another number")
+			except Exception:
+				print("ex3")
+				continue
+
+	except Exception:
+		print("Pick a number - ex2")
+		continue
