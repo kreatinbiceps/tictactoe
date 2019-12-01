@@ -27,6 +27,11 @@ def drawTablep2(player2_choice):
 
 
 
+def count():
+	if rows[0] and rows[1] and rows[2] == "X":
+		print ("you have 3 in a row - P1 Wins")
+	if rows[0] and rows[1] and rows[2] == "O":
+		print ("you have 3 in a row - P2 Wins")
 
 
 
@@ -39,6 +44,7 @@ while a==1:
 
 			if rows[player1_choice-1] == "_":
 				drawTablep1(player1_choice)
+				count()
 				break
 			else:
 				print("Pick another number")
@@ -55,6 +61,7 @@ while a==1:
 
 				if rows[player2_choice-1] == "_":
 					drawTablep2(player2_choice)
+					count()
 					break
 				else:
 					print("Pick another number")
