@@ -34,22 +34,24 @@ def drawTablep2(player2_choice):
 a=1
 while a==1:
 	try:
-		player1_choice = int(input("Player 1, choose from 1-9 "))
+		while True:
+			player1_choice = int(input("Player 1, choose from 1-9 "))
 
-		if rows[player1_choice-1] == "_":
-			drawTablep1(player1_choice)
-		else:
-			print("Pick another number")
-			continue
+			if rows[player1_choice-1] == "_":
+				drawTablep1(player1_choice)
+				break
+			else:
+				print("Pick another number")
 
+		while True:
+			player2_choice = int(input("Player 2, choose from 1-9 "))
 
+			if rows[player2_choice-1] == "_":
+				drawTablep2(player2_choice)
+				break
+			else:
+				print("Pick another number")
 
-		player2_choice = int(input("Player 2, choose from 1-9 "))
-		if rows[player2_choice-1] == "_":
-			drawTablep2(player2_choice)
-		else:
-			print("Pick another number")
-			continue
 	except Exception:
 		print("Pick a number")
 
