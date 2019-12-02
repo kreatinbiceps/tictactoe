@@ -36,6 +36,9 @@ def drawTablep2(player2_choice):
 	print (rows[6], "|", rows[7], "|", rows[8],"\n")
 
 
+def countNew():
+	winningCombo = (0,1,2)
+
 #If statements if you have 3 in a row....
 def count():
 	win = "you have 3 in a row - P1 Wins"
