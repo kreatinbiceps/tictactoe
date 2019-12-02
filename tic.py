@@ -2,7 +2,20 @@ import sys
 
 rows = ["_", "_", "_", "_", "_", "_", "_", "_", "_"]
 
+#Show first table on startup
+print ("Welcome to TicTacToe\n")
+print ("1", "|", "2", "|", "3","\n")
+print ("4", "|", "5", "|", "6","\n")
+print ("7", "|", "8", "|", "9","\n")
 
+print("\nLets Play. Player 1 starts\n")
+
+print (rows[0], "|", rows[1], "|", rows[2],"\n")
+print (rows[3], "|", rows[4], "|", rows[5],"\n")
+print (rows[6], "|", rows[7], "|", rows[8],"\n")
+
+
+#Player 1 choice turns into "X"
 def drawTablep1(player1_choice):
 
 
@@ -13,10 +26,7 @@ def drawTablep1(player1_choice):
 	print (rows[6], "|", rows[7], "|", rows[8],"\n")
 
 
-
-
-
-
+#Player 2 choice turn into "X"
 def drawTablep2(player2_choice):
 
 	rows[player2_choice-1] = "O"
@@ -26,10 +36,10 @@ def drawTablep2(player2_choice):
 	print (rows[6], "|", rows[7], "|", rows[8],"\n")
 
 
-
+#If statements if you have 3 in a row....
 def count():
 	win = "you have 3 in a row - P1 Wins"
-	print(rows)
+#	print(rows)
 #	Horizontal X
 
 	if rows[0] == "X" and rows[1] == "X" and rows[2] == "X":
@@ -103,7 +113,6 @@ def count():
 
 
 
-
 a=1
 while a==1:
 	try:
@@ -119,7 +128,7 @@ while a==1:
 
 
 	except Exception:
-		print("Pick a number - ex1")
+		print("Pick a number")
 		continue
 	try:
 
@@ -134,9 +143,8 @@ while a==1:
 				else:
 					print("Pick another number")
 			except Exception:
-				print("ex3")
 				continue
 
 	except Exception:
-		print("Pick a number - ex2")
+		print("Pick a number")
 		continue
